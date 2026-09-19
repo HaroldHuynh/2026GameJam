@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://d2ha4w2gxcjv3"]
+
+[ext_resource type="Script" uid="uid://bt5gv67c4ta2u" path="res://levels/boss.gd" id="1_bfgim"]
+[ext_resource type="Texture2D" uid="uid://c88kcegjp26so" path="res://assets/texture/gj1.png" id="1_d0r4i"]
+[ext_resource type="Texture2D" uid="uid://bop2ixwybw5cw" path="res://assets/texture/gj2.png" id="2_bfgim"]
+[ext_resource type="PackedScene" uid="uid://64up8dmdlemy" path="res://levels/laser.tscn" id="2_jd5gx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7pw8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_d0r4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bfgim")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obt1k"]
+size = Vector2(155.9, 243.5)
+
+[node name="Michelangelo" type="CharacterBody2D" unique_id=1819540606]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_bfgim")
+laser_scene = ExtResource("2_jd5gx")
+fire_every_seconds = null
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1714282601]
+sprite_frames = SubResource("SpriteFrames_s7pw8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1578451107]
+position = Vector2(84.49998, -4.4999313)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_obt1k")

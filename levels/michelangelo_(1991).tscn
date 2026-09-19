@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://03eygp1gukmw"]
+
+[ext_resource type="Texture2D" uid="uid://bj10r37n68wd" path="res://assets/texture/angelo-attack1.png" id="1_ds5fn"]
+[ext_resource type="Script" uid="uid://bt5gv67c4ta2u" path="res://levels/boss.gd" id="1_ixhdo"]
+[ext_resource type="Texture2D" uid="uid://c88kcegjp26so" path="res://assets/texture/gj1.png" id="1_p5vl5"]
+[ext_resource type="Texture2D" uid="uid://bop2ixwybw5cw" path="res://assets/texture/gj2.png" id="2_5n0hc"]
+[ext_resource type="Texture2D" uid="uid://duevitpev4jfk" path="res://assets/texture/angelo-attack2.png" id="2_ixhdo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5vl5"]
+size = Vector2(3.051, 3.7940004)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gqjfa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ds5fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ixhdo")
+}],
+"loop": 1,
+"name": &"angelo-attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p5vl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5n0hc")
+}],
+"loop": 1,
+"name": &"angelo-idle",
+"speed": 5.0
+}]
+
+[node name="Michelangelo (1991)" type="StaticBody2D" unique_id=680848698]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_ixhdo")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1703036539]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=105972220]
+position = Vector2(-200.50006, -873)
+scale = Vector2(1000, 1000)
+shape = SubResource("RectangleShape2D_p5vl5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1921463905]
+position = Vector2(-363.49988, -876.4999)
+scale = Vector2(1.54525, 1.5418518)
+sprite_frames = SubResource("SpriteFrames_gqjfa")
+animation = &"angelo-idle"
