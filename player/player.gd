@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal shoot
+
 var screen_size : Vector2
 var speed : int
 
@@ -22,3 +24,9 @@ func process_movement() -> void:
 	
 	#limit movement to window size
 	position = position.clamp(Vector2.ZERO, screen_size)
+	
+	#shooting
+	if Input.is_key_pressed(KEY_SPACE):
+		var dir = get_global_mouse_position() - position
+		
+		

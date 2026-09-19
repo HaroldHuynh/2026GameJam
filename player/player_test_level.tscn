@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://dsasnkt4xbn8u"]
 
+[ext_resource type="Script" uid="uid://bw5fkxvrivk5f" path="res://player/player_test_level.gd" id="1_b1r12"]
 [ext_resource type="PackedScene" uid="uid://bx76wcvt7v6l5" path="res://player/player.tscn" id="1_iua4h"]
+[ext_resource type="PackedScene" uid="uid://g7njs30vno7e" path="res://enemy/enemy_spawner.tscn" id="2_2p1ok"]
 
 [node name="PlayerTestLevel" type="Node2D" unique_id=1984897700]
+script = ExtResource("1_b1r12")
 
-[node name="CharacterBody2D" parent="." unique_id=791101554 instance=ExtResource("1_iua4h")]
+[node name="player" parent="." unique_id=791101554 instance=ExtResource("1_iua4h")]
+
+[node name="EnemySpawner" parent="." unique_id=94398231 instance=ExtResource("2_2p1ok")]
+
+[connection signal="hit_p" from="EnemySpawner" to="." method="_on_enemy_spawner_hit_p"]
