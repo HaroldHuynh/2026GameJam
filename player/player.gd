@@ -28,5 +28,4 @@ func process_movement() -> void:
 	#shooting
 	if Input.is_key_pressed(KEY_SPACE):
 		var dir = get_global_mouse_position() - position
-		
-		
+		shoot.emit(position, dir)

@@ -17,7 +17,7 @@ func _ready() -> void:
 
 func _on_timer_timeout() -> void:
 	var enemies = get_tree().get_nodes_in_group("enemies")
-	if enemies.size < max_enemies:	
+	if enemies.size() < max_enemies:	
 		var spawn = spawn_points[randi() % spawn_points.size()]
 		var enemy = enemy_scene.instantiate()
 		enemy.position = spawn.position
