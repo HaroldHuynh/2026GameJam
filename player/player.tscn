@@ -3,8 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://dfpmh5j1gw346" path="res://icon.svg" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://dhjey7btq2ik3" path="res://player/player.gd" id="1_rkbax"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkikn"]
+size = Vector2(128, 128)
+
 [node name="player" type="CharacterBody2D" unique_id=791101554]
+collision_layer = 2
 script = ExtResource("1_rkbax")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1308834584]
 texture = ExtResource("1_oul6g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=558579591]
+shape = SubResource("RectangleShape2D_rkikn")
