@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://eucuk2coju6g"]
 
 [ext_resource type="Texture2D" uid="uid://dfpmh5j1gw346" path="res://icon.svg" id="1_2mvqj"]
+[ext_resource type="Script" uid="uid://hvej6l3tnpks" path="res://enemy/enemy.gd" id="1_ofsxj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkikn"]
 size = Vector2(128, 129)
 
 [node name="enemy" type="CharacterBody2D" unique_id=529858834]
 collision_layer = 4
+script = ExtResource("1_ofsxj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1762805690]
 position = Vector2(0, -0.5)

@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var level = get_node("/root/PlayerTestLevel")
+@onready var level = get_node("/root/%s" % [get_parent().name]) 
 
 var enemy_scene = preload("res://enemy/enemy.tscn")
 var spawn_points := []
