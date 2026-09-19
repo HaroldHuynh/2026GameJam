@@ -13,6 +13,10 @@
 
 [node name="player" parent="." unique_id=791101554 instance=ExtResource("2_n46q3")]
 
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1713923249]
+position = Vector2(-2, 2)
+scale = Vector2(1000, 1000)
+
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=484804871]
 modulate = Color(0.5625185, 0.56694263, 0.57071996, 0.23529412)
 position = Vector2(52, -320)
@@ -26,4 +30,4 @@ position = Vector2(0, -387)
 [node name="Bullet0" parent="." unique_id=1668686589 instance=ExtResource("4_btoec")]
 
 [node name="Michelangelo" parent="." unique_id=1819540606 instance=ExtResource("4_kx6l7")]
-position = Vector2(-62, -14)
+position = Vector2(915, -907)
