@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://srh4x4fiq4x1"]
+
+[ext_resource type="Texture2D" uid="uid://dkq674uo7tvkg" path="res://player/gameover.png" id="1_o2vrq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fr624"]
+texture = ExtResource("1_o2vrq")
+
+[node name="GameOver" type="CanvasLayer" unique_id=585318248]
+process_mode = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=391532980]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fr624")
