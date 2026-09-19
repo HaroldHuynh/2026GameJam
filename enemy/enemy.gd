@@ -6,8 +6,12 @@ var levelname : String
 
 signal hit_player 
 
+var alive : bool
 var speed = 300.0
 var direction : Vector2 
+
+func _ready():
+	alive = true
 
 func _physics_process(delta: float) -> void:
 	direction = player.position - position
@@ -15,6 +19,10 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * speed
 	move_and_slide()
 	look_at(player.position)
+	
+func die():
+	alive = false
+	queue_free()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
