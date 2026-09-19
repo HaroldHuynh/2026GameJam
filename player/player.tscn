@@ -19,3 +19,8 @@ texture = ExtResource("2_rkbax")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=558579591]
 position = Vector2(0.5, 2)
 shape = SubResource("RectangleShape2D_rkikn")
+
+[node name="ShotTimer" type="Timer" parent="." unique_id=1611163808]
+wait_time = 0.5
+
+[connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]

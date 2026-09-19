@@ -4,11 +4,13 @@ signal shoot
 
 var screen_size : Vector2
 var speed : int
+var can_shoot : bool
 
 func _ready():
 	screen_size = get_viewport_rect().size
 	position = screen_size / 2
 	speed = 300.0
+	can_shoot = true
 
 func _physics_process(delta: float) -> void:
 	process_movement()
@@ -26,7 +28,13 @@ func process_movement() -> void:
 	position = position.clamp(Vector2.ZERO, screen_size)
 	
 	#shooting
-	if Input.is_key_pressed(KEY_SPACE):
+	if Input.is_key_pressed(KEY_SPACE) and can_shoot:
 		var dir = get_global_mouse_position() - position
+		shoot.emit(position, dir)
+		can_shoot = false
+		$ShotTimer.start()
 		
 		
+
+func _on_shot_timer_timeout() -> void:
+	can_shoot = true
