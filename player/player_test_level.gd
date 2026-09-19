@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_enemy_spawner_hit_p() -> void:
-	print("Hit Player")
+	pass
