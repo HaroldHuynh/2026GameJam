@@ -22,6 +22,7 @@ animations = [{
 size = Vector2(325, 2749)
 
 [node name="Laser" type="CharacterBody2D" unique_id=15609072]
+scale = Vector2(0.2, 0.2)
 script = ExtResource("3_ydaio")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=3554977]
@@ -30,6 +31,13 @@ sprite_frames = SubResource("SpriteFrames_s7pw8")
 frame = 1
 frame_progress = 0.19443889
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1504191055]
-position = Vector2(-245.5, 97.5)
+[node name="Area2D" type="Area2D" parent="." unique_id=1602338770]
+position = Vector2(4.9999995, 19.999998)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1504191055]
+position = Vector2(-245.49998, 97.49999)
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_s7pw8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

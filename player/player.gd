@@ -7,8 +7,10 @@ var speed : int
 var can_shoot : bool
 
 func _ready():
+	add_to_group("player")
 	screen_size = get_viewport_rect().size
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	can_shoot = true
 	reset()
 
 func reset():
