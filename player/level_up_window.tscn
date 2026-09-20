@@ -17,14 +17,14 @@ offset_right = 727.0
 offset_bottom = 288.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.6, 0.6)
 theme_override_styles/panel = SubResource("StyleBoxTexture_rkikn")
 
 [node name="Label" type="Label" parent="." unique_id=1941475404]
-offset_left = 276.0
-offset_top = 541.0
-offset_right = 2569.0
-offset_bottom = 1228.0
+offset_left = 423.0
+offset_top = 570.0
+offset_right = 2716.0
+offset_bottom = 1257.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 125
 text = "Update Compete!
@@ -32,5 +32,56 @@ Add a New Feature"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=632519231]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 766.0
+offset_top = 1006.0
+offset_right = 1395.3334
+offset_bottom = 1140.6666
+scale = Vector2(0.8, 0.8)
+theme_override_font_sizes/font_size = 68
+text = "Upgrade Antivirus"
+
+[node name="Button4" type="Button" parent="." unique_id=1636556336]
+offset_left = 1313.0
+offset_top = 1006.0
+offset_right = 1942.3334
+offset_bottom = 1140.6666
+scale = Vector2(0.8, 0.8)
+theme_override_font_sizes/font_size = 80
+text = "More RAM"
+
+[node name="Button5" type="Button" parent="." unique_id=869142538]
+offset_left = 1860.0
+offset_top = 1005.0
+offset_right = 2489.3335
+offset_bottom = 1139.6666
+scale = Vector2(0.8, 0.8)
+theme_override_font_sizes/font_size = 80
+text = "Faster CPU"
+
+[node name="Label2" type="Label" parent="." unique_id=357034069]
+offset_left = 860.0
+offset_top = 1117.0
+offset_right = 1133.0
+offset_bottom = 1200.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "+Damage"
+
+[node name="Label3" type="Label" parent="." unique_id=516207746]
+offset_left = 1434.0
+offset_top = 1121.0
+offset_right = 1707.0
+offset_bottom = 1204.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "+Health"
+
+[node name="Label4" type="Label" parent="." unique_id=2141379403]
+offset_left = 1915.0
+offset_top = 1117.0
+offset_right = 2300.0
+offset_bottom = 1286.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "+ATK Speed
++Move Speed"
