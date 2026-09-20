@@ -23,6 +23,8 @@ script = ExtResource("1_b1r12")
 visible = false
 
 [node name="LevelUpWindow" parent="." unique_id=251276580 instance=ExtResource("7_vk0qw")]
+offset = Vector2(-80, 0)
+transform = Transform2D(1, 0, 0, 1, -80, 0)
 
 [connection signal="shoot" from="player" to="BulletManager" method="_on_player_shoot"]
 [connection signal="hit_p" from="EnemySpawner" to="." method="_on_enemy_spawner_hit_p"]

@@ -31,7 +31,7 @@ func new_game():
 	$BulletManager.damage = damage
 	$player.reset()
 	$Hud/HPLabel.text = "Memory: " + str(int((hp / maxHP) * 100)) + "%"
-	$Hud/EXPLabel.text = "Update Progress: " + str(exp)
+	$Hud/EXPLabel.text = "Update Progress: " + str(exp) + "%"
 	$Hud/LevelLabel.text = "Windows 1." + str(level)
 	$GameOver.hide()
 	$LevelUpWindow.hide()
@@ -51,7 +51,7 @@ func _on_enemy_spawner_hit_p() -> void:
 		
 func updateExp():
 	exp += 10
-	$Hud/EXPLabel.text = "Update Progress: " + str(exp)
+	$Hud/EXPLabel.text = "Update Progress: " + str(exp) + "%"
 	if exp >= 100:
 		levelUp()
 		

@@ -5,6 +5,15 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rkikn"]
 texture = ExtResource("1_tmwq4")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tmwq4"]
+bg_color = Color(3.513545e-06, 0.59145397, 0.2258294, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cuqqv"]
+bg_color = Color(0, 0.5921569, 0.22745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fkhwn"]
+bg_color = Color(0, 0.5921569, 0.22745098, 1)
+
 [node name="LevelUpWindow" type="CanvasLayer" unique_id=251276580]
 
 [node name="Panel" type="Panel" parent="." unique_id=1246729210]
@@ -38,6 +47,7 @@ offset_right = 1395.3334
 offset_bottom = 1140.6666
 scale = Vector2(0.8, 0.8)
 theme_override_font_sizes/font_size = 68
+theme_override_styles/normal = SubResource("StyleBoxFlat_tmwq4")
 text = "Upgrade Antivirus"
 
 [node name="Button4" type="Button" parent="." unique_id=1636556336]
@@ -47,6 +57,7 @@ offset_right = 1942.3334
 offset_bottom = 1140.6666
 scale = Vector2(0.8, 0.8)
 theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_cuqqv")
 text = "More RAM"
 
 [node name="Button5" type="Button" parent="." unique_id=869142538]
@@ -56,6 +67,7 @@ offset_right = 2489.3335
 offset_bottom = 1139.6666
 scale = Vector2(0.8, 0.8)
 theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_fkhwn")
 text = "Faster CPU"
 
 [node name="Label2" type="Label" parent="." unique_id=357034069]
