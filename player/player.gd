@@ -5,6 +5,7 @@ signal shoot
 var screen_size : Vector2
 var speed : int
 var can_shoot : bool
+var atkSpeed : float
 
 func _ready():
 	add_to_group("player")
@@ -13,7 +14,6 @@ func _ready():
 	reset()
 
 func reset():
-	speed = 500.0
 	can_shoot = true
 
 func _physics_process(delta: float) -> void:
@@ -42,6 +42,7 @@ func process_movement() -> void:
 		var dir = get_global_mouse_position() - position
 		shoot.emit(position, dir)
 		can_shoot = false
+		$ShotTimer.wait_time = atkSpeed
 		$ShotTimer.start()
 		
 		
