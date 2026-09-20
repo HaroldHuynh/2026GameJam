@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c2dqr0dnn03ws" path="res://player/bullet_manager.tscn" id="4_beocl"]
 [ext_resource type="PackedScene" uid="uid://c8oghx1s5bjhl" path="res://player/hud.tscn" id="5_5xuwe"]
 [ext_resource type="PackedScene" uid="uid://srh4x4fiq4x1" path="res://player/game_over.tscn" id="6_fr624"]
+[ext_resource type="PackedScene" uid="uid://ly1s4rhvrcxn" path="res://player/level_up_window.tscn" id="7_vk0qw"]
 
 [node name="PlayerTestLevel" type="Node2D" unique_id=1984897700]
 script = ExtResource("1_b1r12")
@@ -20,6 +21,8 @@ script = ExtResource("1_b1r12")
 
 [node name="GameOver" parent="." unique_id=585318248 instance=ExtResource("6_fr624")]
 visible = false
+
+[node name="LevelUpWindow" parent="." unique_id=251276580 instance=ExtResource("7_vk0qw")]
 
 [connection signal="shoot" from="player" to="BulletManager" method="_on_player_shoot"]
 [connection signal="hit_p" from="EnemySpawner" to="." method="_on_enemy_spawner_hit_p"]

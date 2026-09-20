@@ -23,6 +23,7 @@ func new_game():
 	$Hud/EXPLabel.text = "Update Progress: " + str(exp)
 	$Hud/LevelLabel.text = "Windows 1." + str(level)
 	$GameOver.hide()
+	$LevelUpWindow.hide()
 	gameOver = false
 	get_tree().call_group("enemies", "queue_free")
 	get_tree().call_group("bullets", "queue_free")
@@ -45,5 +46,6 @@ func updateExp():
 		
 func levelUp():
 	get_tree().paused = true
+	$LevelUpWindow.show()
 	level += 1
 	$Hud/LevelLabel.text = "Windows 1." + str(level)

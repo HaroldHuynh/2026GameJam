@@ -1,23 +1,36 @@
 [gd_scene format=3 uid="uid://ly1s4rhvrcxn"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkikn"]
+[ext_resource type="Texture2D" uid="uid://dwavme86ocbdr" path="res://player/levelupwindow.png" id="1_tmwq4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rkikn"]
+texture = ExtResource("1_tmwq4")
 
 [node name="LevelUpWindow" type="CanvasLayer" unique_id=251276580]
 
 [node name="Panel" type="Panel" parent="." unique_id=1246729210]
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 727.0
+offset_top = 288.0
+offset_right = 727.0
+offset_bottom = 288.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_rkikn")
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_rkikn")
 
 [node name="Label" type="Label" parent="." unique_id=1941475404]
-offset_left = 309.0
-offset_top = 18.0
-offset_right = 2602.0
-offset_bottom = 705.0
-theme_override_font_sizes/font_size = 250
+offset_left = 276.0
+offset_top = 541.0
+offset_right = 2569.0
+offset_bottom = 1228.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 125
 text = "Update Compete!
 Add a New Feature"
 horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=632519231]
+offset_right = 8.0
+offset_bottom = 8.0
