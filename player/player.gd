@@ -35,7 +35,7 @@ func process_movement() -> void:
 	velocity = direction.normalized() * speed
 	
 	#limit movement to window size
-	position = position.clamp(Vector2(-3000, -3000), Vector2(6000, 6000))
+	position = position.clamp(Vector2(-110, -60), Vector2(2700, 1700))
 	
 	#shooting
 	if Input.is_key_pressed(KEY_SPACE) and can_shoot:

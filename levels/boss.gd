@@ -54,6 +54,8 @@ func fire_laser() -> void:
 	$AnimatedSprite2D.play("default")
 	is_attacking = false
 
+func die():
+	pass
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	hit_player.emit()
