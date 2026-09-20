@@ -2,6 +2,7 @@ extends Area2D
 
 var direction : Vector2
 var speed : int = 500
+var damage : int = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,7 +21,7 @@ func _on_timer_timeout() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.alive:
 		queue_free()
-		body.hp -= 1
+		body.hp -= damage
 		if body.hp <= 0:
 			body.die()
 		
