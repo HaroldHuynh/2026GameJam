@@ -1,6 +1,19 @@
 [gd_scene format=3 uid="uid://cva3o3wej5wf0"]
 
 [ext_resource type="Texture2D" uid="uid://ckhm1v201oogx" path="res://assets/texture/X.png" id="1_l7p8x"]
+[ext_resource type="Script" uid="uid://dcbg78j5e241c" path="res://main menu/texture_rect.gd" id="2_1pj26"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_611wi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r8dnh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kl3tn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ft5c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yejht"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r7dq4"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1745393780]
 
@@ -13,3 +26,41 @@ grow_vertical = 2
 texture = ExtResource("1_l7p8x")
 expand_mode = 1
 stretch_mode = 6
+script = ExtResource("2_1pj26")
+
+[node name="Play" type="Button" parent="TextureRect" unique_id=1553367023]
+layout_mode = 0
+offset_left = 942.0
+offset_top = 376.0
+offset_right = 1192.0
+offset_bottom = 623.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_611wi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r8dnh")
+toggle_mode = true
+button_pressed = true
+
+[node name="Credits" type="Button" parent="TextureRect" unique_id=642400631]
+layout_mode = 0
+offset_left = 939.0
+offset_top = 825.0
+offset_right = 1189.0
+offset_bottom = 1082.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kl3tn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6ft5c")
+toggle_mode = true
+button_pressed = true
+
+[node name="Quit" type="Button" parent="TextureRect" unique_id=1908533598]
+layout_mode = 0
+offset_left = 2025.0
+offset_top = 144.0
+offset_right = 2147.0
+offset_bottom = 242.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yejht")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r7dq4")
+toggle_mode = true
+button_pressed = true
+
+[connection signal="pressed" from="TextureRect/Play" to="TextureRect" method="_on_start_button_pressed"]
+[connection signal="pressed" from="TextureRect/Credits" to="TextureRect" method="_on_credits_button_pressed"]
+[connection signal="pressed" from="TextureRect/Quit" to="TextureRect" method="_on_quit_pressed"]
