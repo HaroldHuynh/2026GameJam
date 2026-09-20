@@ -5,27 +5,39 @@
 [node name="Hud" type="CanvasLayer" unique_id=731691075]
 
 [node name="Panel" type="Panel" parent="." unique_id=769030547]
+visible = false
 offset_right = 768.0
 offset_bottom = 48.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_imrot")
 
 [node name="HPLabel" type="Label" parent="." unique_id=1859589680]
-offset_left = 20.0
-offset_top = 4.0
-offset_right = 123.0
-offset_bottom = 27.0
+offset_left = 690.0
+offset_top = 23.0
+offset_right = 990.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 50
 text = "Memory: 0%"
 
 [node name="EXPLabel" type="Label" parent="." unique_id=559406617]
-offset_left = 588.0
-offset_top = 22.0
-offset_right = 748.0
-offset_bottom = 45.0
+offset_left = 1522.0
+offset_top = 23.0
+offset_right = 2020.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 50
 text = "Update Progress: 0%"
 
 [node name="LevelLabel" type="Label" parent="." unique_id=1242894387]
-offset_left = 638.0
-offset_top = 4.0
-offset_right = 745.0
-offset_bottom = 27.0
+offset_left = 1092.0
+offset_top = 23.0
+offset_right = 1424.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 50
 text = "Windows 1.00"
+
+[node name="CompletionLabel" type="Label" parent="." unique_id=1560587889]
+offset_left = 2115.0
+offset_top = 23.0
+offset_right = 2727.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 50
+text = "Malware Eliminated: XX%"
