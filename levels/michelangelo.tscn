@@ -35,8 +35,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_obt1k"]
 size = Vector2(155.9, 243.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkikn"]
+size = Vector2(1560, 2426.6665)
+
 [node name="Michelangelo" type="CharacterBody2D" unique_id=1819540606]
 scale = Vector2(0.3, 0.3)
+collision_layer = 5
 script = ExtResource("1_bfgim")
 laser_scene = ExtResource("2_jd5gx")
 metadata/_edit_lock_ = true
@@ -49,3 +53,12 @@ animation = &"attack"
 position = Vector2(84.49998, -4.4999313)
 scale = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_obt1k")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1933636769]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=899906746]
+position = Vector2(86.66665, -6.6666536)
+shape = SubResource("RectangleShape2D_rkikn")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -6,12 +6,14 @@ var levelname : String
 
 signal hit_player 
 
+var hp : int
 var alive : bool
 var speed = 300.0
 var direction : Vector2 
 
 func _ready():
 	alive = true
+	hp = 2
 
 func _physics_process(delta: float) -> void:
 	direction = player.position - position
