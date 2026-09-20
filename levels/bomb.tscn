@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dr28arotq7uep"]
+
+[ext_resource type="Texture2D" uid="uid://c4lsbbns065df" path="res://assets/texture/bomb.png" id="1_4tf5r"]
+[ext_resource type="Script" uid="uid://mj0cnxja4qss" path="res://levels/bomb.gd" id="2_x7qnh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_how41"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4tf5r")
+}],
+"loop": 1,
+"name": &"explosion",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s7pw8"]
+
+[node name="bomb" type="CharacterBody2D" unique_id=650161304]
+script = ExtResource("2_x7qnh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1679159398]
+position = Vector2(-2.5, 0)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_how41")
+animation = &"explosion"
+frame_progress = 0.9097266
+
+[node name="Area2D" type="Area2D" parent="." unique_id=253997292]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2109983839]
+scale = Vector2(10, 10)
+shape = SubResource("CircleShape2D_s7pw8")
