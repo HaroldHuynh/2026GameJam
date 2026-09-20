@@ -4,9 +4,22 @@
 [ext_resource type="Texture2D" uid="uid://c88kcegjp26so" path="res://assets/texture/gj1.png" id="1_d0r4i"]
 [ext_resource type="Texture2D" uid="uid://bop2ixwybw5cw" path="res://assets/texture/gj2.png" id="2_bfgim"]
 [ext_resource type="PackedScene" uid="uid://64up8dmdlemy" path="res://levels/laser.tscn" id="2_jd5gx"]
+[ext_resource type="Texture2D" uid="uid://bj10r37n68wd" path="res://assets/texture/angelo-attack1.png" id="3_c6ff3"]
+[ext_resource type="Texture2D" uid="uid://duevitpev4jfk" path="res://assets/texture/angelo-attack2.png" id="4_7yivv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s7pw8"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_c6ff3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7yivv")
+}],
+"loop": 1,
+"name": &"attack",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_d0r4i")
@@ -26,11 +39,11 @@ size = Vector2(155.9, 243.5)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_bfgim")
 laser_scene = ExtResource("2_jd5gx")
-fire_every_seconds = null
 metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1714282601]
 sprite_frames = SubResource("SpriteFrames_s7pw8")
+animation = &"attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1578451107]
 position = Vector2(84.49998, -4.4999313)

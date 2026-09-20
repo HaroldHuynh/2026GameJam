@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var laser_scene: PackedScene
-@export var fire_every_seconds := 2.0
+@export var fire_every_seconds := 7.0
 
 var alive : bool
 
@@ -14,6 +14,7 @@ func _ready() -> void:
 	add_child(fire_timer)
 
 func fire_laser() -> void:
+	$Michelangelo/AnimatedSprite2D.play("attack")
 	var laser = laser_scene.instantiate()
 	get_parent().add_child(laser)
 
