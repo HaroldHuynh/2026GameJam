@@ -25,12 +25,12 @@ func new_game():
 	level = 0
 	atkSpeed = 0.5
 	damage = 1
-	moveSpeed = 1000
+	moveSpeed = 500
 	$player.speed = moveSpeed
 	$player.atkSpeed = atkSpeed
 	$BulletManager.damage = damage
 	$player.reset()
-	$Hud/HPLabel.text = "Memory: " + str(int((hp / maxHP) * 100)) + "%"
+	$Hud/HPLabel.text = "Memory: " + str(100 - int((hp / maxHP) * 100)) + "%"
 	$Hud/EXPLabel.text = "Update Progress: " + str(exp) + "%"
 	$Hud/LevelLabel.text = "Windows 1." + str(level)
 	$GameOver.hide()
@@ -43,7 +43,7 @@ func new_game():
 
 func _on_enemy_spawner_hit_p() -> void:
 	hp -= 1
-	$Hud/HPLabel.text = "Memory: " + str(int((hp / maxHP) * 100)) + "%"
+	$Hud/HPLabel.text = "Memory: " + str(100 - int((hp / maxHP) * 100)) + "%"
 	if hp <= 0:
 		get_tree().paused = true
 		$GameOver.show()
@@ -58,5 +58,35 @@ func updateExp():
 func levelUp():
 	get_tree().paused = true
 	$LevelUpWindow.show()
+	
+
+	
+func damageUp():
+	$BulletManager.damage += 1
+	get_tree().paused = false
+	$LevelUpWindow.hide()
 	level += 1
 	$Hud/LevelLabel.text = "Windows 1." + str(level)
+	exp = 0
+	$Hud/EXPLabel.text = "Update Progress: " + str(exp) + "%"
+	
+func healthUp():
+	maxHP += 5
+	hp += 5
+	$Hud/HPLabel.text = "Memory: " + str(100 - int((hp / maxHP) * 100)) + "%"
+	get_tree().paused = false
+	$LevelUpWindow.hide()
+	level += 1
+	$Hud/LevelLabel.text = "Windows 1." + str(level)
+	exp = 0
+	$Hud/EXPLabel.text = "Update Progress: " + str(exp) + "%"
+	
+func speedUp():
+	$player.speed = $player.speed * 1.1
+	$player.atkSpeed = $player.atkSpeed * 0.75
+	get_tree().paused = false
+	$LevelUpWindow.hide()
+	level += 1
+	$Hud/LevelLabel.text = "Windows 1." + str(level)
+	exp = 0
+	$Hud/EXPLabel.text = "Update Progress: " + str(exp) + "%"

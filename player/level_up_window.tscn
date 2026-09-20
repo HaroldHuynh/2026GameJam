@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ly1s4rhvrcxn"]
 
+[ext_resource type="Script" uid="uid://b2g6vjk2r516w" path="res://player/level_up_window.gd" id="1_cuqqv"]
 [ext_resource type="Texture2D" uid="uid://dwavme86ocbdr" path="res://player/levelupwindow.png" id="1_tmwq4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rkikn"]
@@ -15,6 +16,8 @@ bg_color = Color(0, 0.5921569, 0.22745098, 1)
 bg_color = Color(0, 0.5921569, 0.22745098, 1)
 
 [node name="LevelUpWindow" type="CanvasLayer" unique_id=251276580]
+process_mode = 3
+script = ExtResource("1_cuqqv")
 
 [node name="Panel" type="Panel" parent="." unique_id=1246729210]
 anchors_preset = -1
@@ -97,3 +100,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
 text = "+ATK Speed
 +Move Speed"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]

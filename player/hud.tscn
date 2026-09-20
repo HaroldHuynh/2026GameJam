@@ -24,6 +24,7 @@ offset_bottom = 45.0
 text = "Update Progress: 0%"
 
 [node name="LevelLabel" type="Label" parent="." unique_id=1242894387]
+offset_left = 638.0
 offset_top = 4.0
 offset_right = 745.0
 offset_bottom = 27.0

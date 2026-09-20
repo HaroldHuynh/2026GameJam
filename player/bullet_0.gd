@@ -1,7 +1,7 @@
 extends Area2D
 
 var direction : Vector2
-var speed : int = 500
+var speed : int = 1000
 var damage : int = 1
 
 # Called when the node enters the scene tree for the first time.
