@@ -23,7 +23,7 @@ func new_game():
 	hp = 10
 	exp = 0
 	level = 0
-	atkSpeed = 0.5
+	atkSpeed = 0.75
 	damage = 1
 	moveSpeed = 500
 	$player.speed = moveSpeed
@@ -83,7 +83,7 @@ func healthUp():
 	
 func speedUp():
 	$player.speed = $player.speed * 1.1
-	$player.atkSpeed = $player.atkSpeed * 0.75
+	$player.atkSpeed = $player.atkSpeed * 0.9
 	get_tree().paused = false
 	$LevelUpWindow.hide()
 	level += 1
