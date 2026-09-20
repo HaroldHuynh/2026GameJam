@@ -24,8 +24,10 @@ func _physics_process(delta: float) -> void:
 func die():
 	alive = false
 	get_parent().updateExp()
-	get_parent().updateCompletion()
 	queue_free()
+	if get_parent().completion < 90:
+		get_parent().updateCompletion(3)
+	
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

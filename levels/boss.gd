@@ -55,7 +55,7 @@ func fire_laser() -> void:
 	is_attacking = false
 
 func die():
-	pass
+	get_parent().updateCompletion(10)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	hit_player.emit()

@@ -8,7 +8,7 @@ var enemy_scene = preload("res://enemy/enemy.tscn")
 var spawn_points := []
 var max_enemies = 30
 var maxEnemiesOnScreen = 5
-var enemies_spawned = 0
+var enemies_spawned : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,7 +26,6 @@ func _on_timer_timeout() -> void:
 		enemy.hit_player.connect(hit)
 		level.add_child(enemy)
 		enemy.add_to_group("enemies")
-		enemies_spawned += 1
 
 func hit():
 	hit_p.emit()

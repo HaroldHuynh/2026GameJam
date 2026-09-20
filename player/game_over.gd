@@ -10,5 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if get_parent().gameOver == true:
 		if Input.is_key_pressed(KEY_ENTER):
-			print("ENTERED")
 			get_parent().new_game()
+		if Input.is_key_pressed(KEY_ESCAPE):
+			get_tree().change_scene_to_file("res://main menu/main menu.tscn")
