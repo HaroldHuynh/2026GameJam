@@ -5,8 +5,15 @@ extends CharacterBody2D
 @export var warning_seconds := 2.0
 
 var is_attacking := false
+var hp : int
+var alive : bool
+
+signal hit_player
 
 func _ready() -> void:
+	alive = true
+	hp = 12
+	
 	$AnimatedSprite2D.play("default")
 
 	var fire_timer := Timer.new()
@@ -38,3 +45,7 @@ func fire_laser() -> void:
 
 	$AnimatedSprite2D.play("default")
 	is_attacking = false
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	hit_player.emit()

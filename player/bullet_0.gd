@@ -21,5 +21,7 @@ func _on_timer_timeout() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.alive:
 		queue_free()
-		body.die()
+		body.hp -= 1
+		if body.hp <= 0:
+			body.die()
 		
