@@ -42,13 +42,9 @@ z_index = -1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 130.63
-offset_top = 88.0
-offset_right = 130.62988
-offset_bottom = 88.0
+offset_bottom = -0.011474609
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.91, 0.91)
 theme_override_styles/panel = SubResource("StyleBoxTexture_2pwte")
 
 [node name="BulletManager" parent="." unique_id=1162069898 instance=ExtResource("1_kx6l7")]
