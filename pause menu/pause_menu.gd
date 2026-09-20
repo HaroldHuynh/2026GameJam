@@ -7,7 +7,8 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	# "pause" maps to the Escape key by default in Godot
 	if event.is_action_pressed("pause"):
-		toggle_pause()
+		if not get_parent().gameOver:
+			toggle_pause()
 
 func toggle_pause() -> void:
 	# Invert the current pause state of the engine tree

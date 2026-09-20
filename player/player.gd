@@ -20,13 +20,6 @@ func _physics_process(delta: float) -> void:
 	process_movement()
 	move_and_slide()
 	look_at(get_global_mouse_position())
-	
-func _process(delta: float) -> void:
-	if get_parent().gameOver == true:
-		process_mode = Node.PROCESS_MODE_ALWAYS
-		if Input.is_key_pressed(KEY_ENTER):
-			print("ENTERED")
-			get_parent().new_game()
 
 func process_movement() -> void:
 		# Get the input direction and handle the movement/deceleration.

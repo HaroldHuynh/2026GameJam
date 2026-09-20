@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 func new_game():
 	$GameOver.hide()
 	$LevelUpWindow.hide()
+	$Hud.show()
 	completion = 0
 	maxHP = 10
 	hp = 10
@@ -49,6 +50,7 @@ func _on_enemy_spawner_hit_p() -> void:
 	hp -= 1
 	$Hud/HPLabel.text = "Memory: " + str(100 - int((hp / maxHP) * 100)) + "%"
 	if hp <= 0:
+		$Hud.hide()
 		get_tree().paused = true
 		$GameOver.show()
 		gameOver = true

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://srh4x4fiq4x1"]
 
+[ext_resource type="Script" uid="uid://bmsa0jevm7d8f" path="res://player/game_over.gd" id="1_frtbx"]
 [ext_resource type="Texture2D" uid="uid://dkq674uo7tvkg" path="res://player/gameover.png" id="1_o2vrq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fr624"]
@@ -7,6 +8,7 @@ texture = ExtResource("1_o2vrq")
 
 [node name="GameOver" type="CanvasLayer" unique_id=585318248]
 process_mode = 2
+script = ExtResource("1_frtbx")
 
 [node name="Panel" type="Panel" parent="." unique_id=391532980]
 anchors_preset = 15
