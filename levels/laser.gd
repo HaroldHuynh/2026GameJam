@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var direction := Vector2.DOWN
-@export var speed := 700.0
+@export var speed := 2000.0
 
 func aim_at(target_position: Vector2) -> void:
 	direction = global_position.direction_to(target_position)
