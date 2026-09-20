@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bppjray3axgk"]
 
-[ext_resource type="Texture2D" uid="uid://htgipj4ef0ko" path="res://assets/texture/X (2).png" id="1_vldhd"]
+[ext_resource type="Texture2D" uid="uid://bia1vseye4wo2" path="res://main menu/credits.png" id="1_r15k3"]
 [ext_resource type="Script" uid="uid://brnlp3inudcsv" path="res://main menu/credits.gd" id="2_r15k3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kl3tn"]
@@ -19,7 +19,7 @@ offset_right = 2.0
 offset_bottom = -294.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_vldhd")
+texture = ExtResource("1_r15k3")
 expand_mode = 1
 stretch_mode = 6
 script = ExtResource("2_r15k3")

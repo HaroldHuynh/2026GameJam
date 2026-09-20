@@ -32,6 +32,7 @@ func new_game():
 	atkSpeed = 0.75
 	damage = 1
 	moveSpeed = 500
+	$EnemySpawner.enemies_spawned = 0
 	$player.speed = moveSpeed
 	$player.atkSpeed = atkSpeed
 	$BulletManager.damage = damage
@@ -65,10 +66,9 @@ func levelUp():
 	get_tree().paused = true
 	$LevelUpWindow.show()
 	
-func updateCompletion():
-	completion += 3
+func updateCompletion(increase):
+	completion += increase
 	$Hud/CompletionLabel.text = "Malware Eliminated: " + str(completion) + "%"
-
 	
 func damageUp():
 	$BulletManager.damage += 1
