@@ -18,7 +18,7 @@ script = ExtResource("1_btoec")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=484804871]
 modulate = Color(0.5625185, 0.56694263, 0.57071996, 0.23529412)
-position = Vector2(52, -320)
+position = Vector2(43, -935)
 scale = Vector2(4012, 2490.603)
 mesh = SubResource("QuadMesh_s7pw8")
 metadata/_edit_lock_ = true
@@ -35,3 +35,6 @@ position = Vector2(-53, -939)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1870320940]
 position = Vector2(2, -943)
+zoom = Vector2(0.9, 0.9)
+
+[connection signal="shoot" from="player" to="BulletManager" method="_on_player_shoot"]
