@@ -3,6 +3,7 @@ extends Area2D
 var direction : Vector2
 var speed : int = 500
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -18,7 +19,6 @@ func _on_timer_timeout() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print(body.name)
 	if body.alive:
 		queue_free()
 		body.die()

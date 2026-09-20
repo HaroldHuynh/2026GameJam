@@ -1,6 +1,8 @@
 extends Node2D
 
 var hp : int
+var exp : int
+var level : int
 var gameOver : bool
 
 # Called when the node enters the scene tree for the first time.
@@ -14,8 +16,12 @@ func _process(delta: float) -> void:
 
 func new_game():
 	hp = 0
+	exp = 0
+	level = 0
 	$player.reset()
 	$Hud/HPLabel.text = "Memory: " + str(hp)
+	$Hud/EXPLabel.text = "Update Progress: " + str(exp)
+	$Hud/LevelLabel.text = "Windows 1." + str(level)
 	$GameOver.hide()
 	gameOver = false
 	get_tree().call_group("enemies", "queue_free")
@@ -30,3 +36,13 @@ func _on_enemy_spawner_hit_p() -> void:
 		get_tree().paused = true
 		$GameOver.show()
 		gameOver = true
+		
+func updateExp():
+	exp += 10
+	$Hud/EXPLabel.text = "Update Progress: " + str(exp)
+	if exp >= 100:
+		levelUp()
+		
+func levelUp():
+	level += 1
+	$Hud/LevelLabel.text = "Windows 1." + str(level)

@@ -19,6 +19,7 @@ script = ExtResource("1_b1r12")
 [node name="Hud" parent="." unique_id=731691075 instance=ExtResource("5_5xuwe")]
 
 [node name="GameOver" parent="." unique_id=585318248 instance=ExtResource("6_fr624")]
+visible = false
 
 [connection signal="shoot" from="player" to="BulletManager" method="_on_player_shoot"]
 [connection signal="hit_p" from="EnemySpawner" to="." method="_on_enemy_spawner_hit_p"]

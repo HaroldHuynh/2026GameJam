@@ -12,6 +12,20 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_imrot")
 [node name="HPLabel" type="Label" parent="." unique_id=1859589680]
 offset_left = 20.0
 offset_top = 4.0
-offset_right = 116.0
+offset_right = 123.0
 offset_bottom = 27.0
 text = "Memory: 0%"
+
+[node name="EXPLabel" type="Label" parent="." unique_id=559406617]
+offset_left = 602.0
+offset_top = 21.0
+offset_right = 762.0
+offset_bottom = 44.0
+text = "Update Progress: 0%"
+
+[node name="LevelLabel" type="Label" parent="." unique_id=1242894387]
+offset_left = 652.0
+offset_top = 3.0
+offset_right = 759.0
+offset_bottom = 26.0
+text = "Windows 1.00"
