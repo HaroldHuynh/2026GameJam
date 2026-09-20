@@ -8,6 +8,7 @@ var atkSpeed : float
 var damage : int
 var moveSpeed : int
 var gameOver : bool
+var completion : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,6 +23,7 @@ func _process(delta: float) -> void:
 func new_game():
 	$GameOver.hide()
 	$LevelUpWindow.hide()
+	completion = 0
 	maxHP = 10
 	hp = 10
 	exp = 0
@@ -33,6 +35,7 @@ func new_game():
 	$player.atkSpeed = atkSpeed
 	$BulletManager.damage = damage
 	$player.reset()
+	$Hud/CompletionLabel.text = "Malware Eliminated: " + str(completion) + "%"
 	$Hud/HPLabel.text = "Memory: " + str(100 - int((hp / maxHP) * 100)) + "%"
 	$Hud/EXPLabel.text = "Update Progress: " + str(exp) + "%"
 	$Hud/LevelLabel.text = "Windows 1." + str(level)
@@ -60,6 +63,9 @@ func levelUp():
 	get_tree().paused = true
 	$LevelUpWindow.show()
 	
+func updateCompletion():
+	completion += 3
+	$Hud/CompletionLabel.text = "Malware Eliminated: " + str(completion) + "%"
 
 	
 func damageUp():

@@ -20,15 +20,15 @@ func _physics_process(delta: float) -> void:
 	direction = direction.normalized()
 	velocity = direction * speed
 	move_and_slide()
-	look_at(player.position)
 	
 func die():
 	alive = false
 	get_parent().updateExp()
-	
+	get_parent().updateCompletion()
 	queue_free()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	hit_player.emit()
+	get_node("../EnemySpawner").enemies_spawned -= 1
 	queue_free()
