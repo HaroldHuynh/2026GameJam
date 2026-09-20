@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bppjray3axgk"]
+
+[ext_resource type="Texture2D" uid="uid://htgipj4ef0ko" path="res://assets/texture/X (2).png" id="1_vldhd"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=644358866]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=17984309]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vldhd")
+expand_mode = 1
+stretch_mode = 5
