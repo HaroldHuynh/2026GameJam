@@ -22,6 +22,8 @@ func _physics_process(delta: float) -> void:
 	
 func die():
 	alive = false
+	get_parent().updateExp()
+	
 	queue_free()
 
 
