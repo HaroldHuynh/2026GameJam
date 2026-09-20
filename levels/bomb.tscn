@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://c4lsbbns065df" path="res://assets/texture/bomb.png" id="1_4tf5r"]
 [ext_resource type="Script" uid="uid://mj0cnxja4qss" path="res://levels/bomb.gd" id="2_x7qnh"]
+[ext_resource type="Texture2D" uid="uid://d2iuu5e4vnsqn" path="res://assets/texture/bomb1.png" id="3_wu0dx"]
+[ext_resource type="Texture2D" uid="uid://d1q6weko1hjg0" path="res://assets/texture/bomb2.png" id="4_864xx"]
+[ext_resource type="Texture2D" uid="uid://bp7esb1d1bem0" path="res://assets/texture/bomb3.png" id="5_jtvht"]
+[ext_resource type="Texture2D" uid="uid://cf3d1l1gt7sye" path="res://assets/texture/bomb4.png" id="6_p75ta"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_how41"]
 animations = [{
@@ -10,24 +14,55 @@ animations = [{
 "texture": ExtResource("1_4tf5r")
 }],
 "loop": 1,
-"name": &"explosion",
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4tf5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wu0dx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_4tf5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_864xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_4tf5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jtvht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_4tf5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p75ta")
+}],
+"loop": 1,
+"name": &"explode",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_s7pw8"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwceb"]
+size = Vector2(32.999996, 25.899998)
 
 [node name="bomb" type="CharacterBody2D" unique_id=650161304]
 script = ExtResource("2_x7qnh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1679159398]
 position = Vector2(-2.5, 0)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_how41")
-animation = &"explosion"
-frame_progress = 0.9097266
+animation = &"explode"
+frame_progress = 0.4339368
 
 [node name="Area2D" type="Area2D" parent="." unique_id=253997292]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2109983839]
+position = Vector2(-330, -280.5)
 scale = Vector2(10, 10)
-shape = SubResource("CircleShape2D_s7pw8")
+shape = SubResource("RectangleShape2D_gwceb")

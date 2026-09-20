@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c88kcegjp26so" path="res://assets/texture/gj1.png" id="1_d0r4i"]
 [ext_resource type="Texture2D" uid="uid://bop2ixwybw5cw" path="res://assets/texture/gj2.png" id="2_bfgim"]
 [ext_resource type="PackedScene" uid="uid://64up8dmdlemy" path="res://levels/laser.tscn" id="2_jd5gx"]
+[ext_resource type="PackedScene" uid="uid://dr28arotq7uep" path="res://levels/bomb.tscn" id="3_7yivv"]
 [ext_resource type="Texture2D" uid="uid://bj10r37n68wd" path="res://assets/texture/angelo-attack1.png" id="3_c6ff3"]
 [ext_resource type="Texture2D" uid="uid://duevitpev4jfk" path="res://assets/texture/angelo-attack2.png" id="4_7yivv"]
 
@@ -36,13 +37,14 @@ animations = [{
 size = Vector2(155.9, 243.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkikn"]
-size = Vector2(1560, 2426.6665)
+size = Vector2(1560, 2430)
 
 [node name="Michelangelo" type="CharacterBody2D" unique_id=1819540606]
 scale = Vector2(0.3, 0.3)
 collision_layer = 5
 script = ExtResource("1_bfgim")
 laser_scene = ExtResource("2_jd5gx")
+bomb_scene = ExtResource("3_7yivv")
 metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1714282601]
@@ -58,7 +60,7 @@ shape = SubResource("RectangleShape2D_obt1k")
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=899906746]
-position = Vector2(86.66665, -6.6666536)
+position = Vector2(86.66665, -8.333341)
 shape = SubResource("RectangleShape2D_rkikn")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
