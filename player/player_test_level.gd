@@ -44,5 +44,6 @@ func updateExp():
 		levelUp()
 		
 func levelUp():
+	get_tree().paused = true
 	level += 1
 	$Hud/LevelLabel.text = "Windows 1." + str(level)

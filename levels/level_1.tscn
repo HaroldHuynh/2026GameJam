@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d2ha4w2gxcjv3" path="res://levels/michelangelo.tscn" id="4_kx6l7"]
 [ext_resource type="PackedScene" uid="uid://srh4x4fiq4x1" path="res://player/game_over.tscn" id="5_n46q3"]
 [ext_resource type="PackedScene" uid="uid://c8oghx1s5bjhl" path="res://player/hud.tscn" id="7_gwceb"]
+[ext_resource type="PackedScene" uid="uid://dh5ejpp7j3alx" path="res://pause menu/pause menu.tscn" id="7_l53as"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_s7pw8"]
 
@@ -42,5 +43,7 @@ warning_seconds = null
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1870320940]
 position = Vector2(2, -943)
 zoom = Vector2(0.9, 0.9)
+
+[node name="PauseMenu" parent="." unique_id=1216728580 instance=ExtResource("7_l53as")]
 
 [connection signal="shoot" from="player" to="BulletManager" method="_on_player_shoot"]

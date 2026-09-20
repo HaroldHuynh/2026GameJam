@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dfj2s2k4lpb5s" path="res://player/zero.png" id="1_7gfu5"]
 [ext_resource type="Script" uid="uid://c7lgbnquv5xw" path="res://player/bullet_0.gd" id="1_ktgnn"]
+[ext_resource type="Script" uid="uid://xchrarqfvj32" path="res://player/sprite_2d.gd" id="3_fwo54"]
+[ext_resource type="Texture2D" uid="uid://dk3oy1u7cpcud" path="res://player/one.png" id="4_qlev8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkikn"]
 radius = 17.0
@@ -16,6 +18,8 @@ script = ExtResource("1_ktgnn")
 position = Vector2(174, 130)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("1_7gfu5")
+script = ExtResource("3_fwo54")
+sprite_pool = Array[Texture2D]([ExtResource("1_7gfu5"), ExtResource("4_qlev8")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=982640149]
 position = Vector2(0, -3)

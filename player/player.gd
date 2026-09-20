@@ -9,7 +9,6 @@ var can_shoot : bool
 func _ready():
 	add_to_group("player")
 	screen_size = get_viewport_rect().size
-	process_mode = Node.PROCESS_MODE_ALWAYS
 	can_shoot = true
 	reset()
 
@@ -24,6 +23,7 @@ func _physics_process(delta: float) -> void:
 	
 func _process(delta: float) -> void:
 	if get_parent().gameOver == true:
+		process_mode = Node.PROCESS_MODE_ALWAYS
 		if Input.is_key_pressed(KEY_ENTER):
 			print("ENTERED")
 			get_parent().new_game()

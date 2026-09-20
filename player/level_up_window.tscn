@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ly1s4rhvrcxn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkikn"]
+
+[node name="LevelUpWindow" type="CanvasLayer" unique_id=251276580]
+
+[node name="Panel" type="Panel" parent="." unique_id=1246729210]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rkikn")
+
+[node name="Label" type="Label" parent="." unique_id=1941475404]
+offset_left = 309.0
+offset_top = 18.0
+offset_right = 2602.0
+offset_bottom = 705.0
+theme_override_font_sizes/font_size = 250
+text = "Update Compete!
+Add a New Feature"
+horizontal_alignment = 1
