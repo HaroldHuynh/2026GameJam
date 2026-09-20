@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c8oghx1s5bjhl" path="res://player/hud.tscn" id="7_gwceb"]
 [ext_resource type="PackedScene" uid="uid://dh5ejpp7j3alx" path="res://pause menu/pause menu.tscn" id="7_l53as"]
 [ext_resource type="PackedScene" uid="uid://ly1s4rhvrcxn" path="res://player/level_up_window.tscn" id="8_l53as"]
+[ext_resource type="PackedScene" uid="uid://g7njs30vno7e" path="res://enemy/enemy_spawner.tscn" id="10_08mmt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3sk1a"]
 bg_color = Color(0, 0, 0, 1)
@@ -79,4 +80,7 @@ visible = false
 [node name="LevelUpWindow" parent="." unique_id=251276580 instance=ExtResource("8_l53as")]
 visible = false
 
+[node name="EnemySpawner" parent="." unique_id=94398231 instance=ExtResource("10_08mmt")]
+
 [connection signal="shoot" from="player" to="BulletManager" method="_on_player_shoot"]
+[connection signal="hit_p" from="EnemySpawner" to="." method="_on_enemy_spawner_hit_p"]

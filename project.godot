@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2026GameJam"
-run/main_scene="uid://dsasnkt4xbn8u"
+run/main_scene="uid://dasqcvhk2xm0h"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
