@@ -63,6 +63,8 @@ frame_progress = 0.4339368
 [node name="Area2D" type="Area2D" parent="." unique_id=253997292]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2109983839]
-position = Vector2(-330, -280.5)
+position = Vector2(-8.0000305, -6.1035156e-05)
 scale = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_gwceb")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
