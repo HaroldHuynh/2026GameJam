@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ckhm1v201oogx" path="res://assets/texture/X.png" id="1_l7p8x"]
 [ext_resource type="Script" uid="uid://dcbg78j5e241c" path="res://main menu/texture_rect.gd" id="2_1pj26"]
+[ext_resource type="PackedScene" uid="uid://bppjray3axgk" path="res://main menu/credits.tscn" id="3_cmmm6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_611wi"]
 
@@ -16,8 +17,9 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r7dq4"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1745393780]
+script = ExtResource("2_1pj26")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1253643617]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=76788236]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -26,7 +28,6 @@ grow_vertical = 2
 texture = ExtResource("1_l7p8x")
 expand_mode = 1
 stretch_mode = 6
-script = ExtResource("2_1pj26")
 
 [node name="Play" type="Button" parent="TextureRect" unique_id=1553367023]
 layout_mode = 0
@@ -61,6 +62,8 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_r7dq4")
 toggle_mode = true
 button_pressed = true
 
-[connection signal="pressed" from="TextureRect/Play" to="TextureRect" method="_on_start_button_pressed"]
-[connection signal="pressed" from="TextureRect/Credits" to="TextureRect" method="_on_credits_button_pressed"]
-[connection signal="pressed" from="TextureRect/Quit" to="TextureRect" method="_on_quit_pressed"]
+[node name="credits" parent="." unique_id=644358866 instance=ExtResource("3_cmmm6")]
+
+[connection signal="pressed" from="TextureRect/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="TextureRect/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="TextureRect/Quit" to="." method="_on_quit_pressed"]

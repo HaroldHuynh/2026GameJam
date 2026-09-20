@@ -21,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_vldhd")
 expand_mode = 1
-stretch_mode = 5
+stretch_mode = 6
 script = ExtResource("2_r15k3")
 
 [node name="Main Menu" type="Button" parent="TextureRect" unique_id=913943092]
