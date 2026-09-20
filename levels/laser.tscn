@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://64up8dmdlemy"]
+
+[ext_resource type="Texture2D" uid="uid://d24v60emifbyr" path="res://assets/texture/laser1.png" id="1_m5i44"]
+[ext_resource type="Texture2D" uid="uid://wjyehl1yoyhi" path="res://assets/texture/laser2.png" id="2_ydaio"]
+[ext_resource type="Script" uid="uid://daf30dgiqfuul" path="res://levels/laser.gd" id="3_ydaio"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7pw8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_m5i44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ydaio")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7pw8"]
+size = Vector2(325, 2749)
+
+[node name="Laser" type="CharacterBody2D" unique_id=15609072]
+script = ExtResource("3_ydaio")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=3554977]
+position = Vector2(214, 101)
+sprite_frames = SubResource("SpriteFrames_s7pw8")
+frame = 1
+frame_progress = 0.19443889
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1504191055]
+position = Vector2(-245.5, 97.5)
+shape = SubResource("RectangleShape2D_s7pw8")

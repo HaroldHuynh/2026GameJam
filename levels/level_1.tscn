@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dasqcvhk2xm0h"]
+
+[ext_resource type="Script" uid="uid://3jn1e706500q" path="res://levels/level_1.gd" id="1_btoec"]
+[ext_resource type="PackedScene" uid="uid://c2dqr0dnn03ws" path="res://player/bullet_manager.tscn" id="1_kx6l7"]
+[ext_resource type="PackedScene" uid="uid://bx76wcvt7v6l5" path="res://player/player.tscn" id="2_n46q3"]
+[ext_resource type="PackedScene" uid="uid://b7vvc08wlccjl" path="res://player/bullet_0.tscn" id="4_btoec"]
+[ext_resource type="PackedScene" uid="uid://d2ha4w2gxcjv3" path="res://levels/michelangelo.tscn" id="4_kx6l7"]
+[ext_resource type="PackedScene" uid="uid://srh4x4fiq4x1" path="res://player/game_over.tscn" id="5_n46q3"]
+[ext_resource type="PackedScene" uid="uid://c8oghx1s5bjhl" path="res://player/hud.tscn" id="7_gwceb"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_s7pw8"]
+
+[node name="terminal-level" type="Node2D" unique_id=1212829906]
+script = ExtResource("1_btoec")
+
+[node name="BulletManager" parent="." unique_id=1162069898 instance=ExtResource("1_kx6l7")]
+
+[node name="player" parent="." unique_id=791101554 instance=ExtResource("2_n46q3")]
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1713923249]
+position = Vector2(-2, 2)
+scale = Vector2(1000, 1000)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=484804871]
+modulate = Color(0.5625185, 0.56694263, 0.57071996, 0.23529412)
+position = Vector2(52, -320)
+scale = Vector2(4012, 2490.603)
+mesh = SubResource("QuadMesh_s7pw8")
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1858376204]
+position = Vector2(0, -387)
+
+[node name="Bullet0" parent="." unique_id=1668686589 instance=ExtResource("4_btoec")]
+
+[node name="Michelangelo" parent="." unique_id=1819540606 instance=ExtResource("4_kx6l7")]
+position = Vector2(-53, -939)
+
+[node name="GameOver" parent="." unique_id=585318248 instance=ExtResource("5_n46q3")]
+
+[node name="Hud" parent="." unique_id=731691075 instance=ExtResource("7_gwceb")]

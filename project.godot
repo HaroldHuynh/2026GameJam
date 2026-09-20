@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="2026GameJam"
-run/main_scene="uid://dsasnkt4xbn8u"
+run/main_scene="uid://dasqcvhk2xm0h"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=3024
+window/size/viewport_height=2000
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

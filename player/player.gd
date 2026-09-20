@@ -12,8 +12,7 @@ func _ready():
 	reset()
 
 func reset():
-	position = screen_size / 2
-	speed = 300.0
+	speed = 500.0
 	can_shoot = true
 
 func _physics_process(delta: float) -> void:
@@ -34,7 +33,7 @@ func process_movement() -> void:
 	velocity = direction.normalized() * speed
 	
 	#limit movement to window size
-	position = position.clamp(Vector2.ZERO, screen_size)
+	position = position.clamp(Vector2(-3000, -3000), Vector2(6000, 6000))
 	
 	#shooting
 	if Input.is_key_pressed(KEY_SPACE) and can_shoot:
