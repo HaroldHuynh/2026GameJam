@@ -15,6 +15,10 @@ func _ready():
 	alive = true
 	hp = 2
 
+func _process(delta: float):
+	if not get_node("../Michelangelo").alive:
+		die()
+
 func _physics_process(delta: float) -> void:
 	direction = player.position - position
 	direction = direction.normalized()
