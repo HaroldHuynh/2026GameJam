@@ -20,6 +20,7 @@ func _physics_process(delta: float) -> void:
 	direction = direction.normalized()
 	velocity = direction * speed
 	move_and_slide()
+	look_at(player.position)
 	
 func die():
 	alive = false
