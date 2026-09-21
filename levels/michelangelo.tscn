@@ -8,6 +8,17 @@
 [ext_resource type="Texture2D" uid="uid://bj10r37n68wd" path="res://assets/texture/angelo-attack1.png" id="3_c6ff3"]
 [ext_resource type="Texture2D" uid="uid://duevitpev4jfk" path="res://assets/texture/angelo-attack2.png" id="4_7yivv"]
 [ext_resource type="Texture2D" uid="uid://dfondrl4tgk0c" path="res://assets/texture/angelo-asleep.png" id="4_etlah"]
+[ext_resource type="Texture2D" uid="uid://cm2i83brpcvpm" path="res://assets/texture/death1.png" id="9_vwdrj"]
+[ext_resource type="Texture2D" uid="uid://cn6n3fdgn0tvi" path="res://assets/texture/death2.png" id="10_6d7vl"]
+[ext_resource type="Texture2D" uid="uid://dcalq7uel6x2d" path="res://assets/texture/death3.png" id="11_vorow"]
+[ext_resource type="Texture2D" uid="uid://btpsyrk66ot42" path="res://assets/texture/death4.png" id="12_xv7am"]
+[ext_resource type="Texture2D" uid="uid://jyxbhkdy0kgu" path="res://assets/texture/death5.png" id="13_6sysp"]
+[ext_resource type="Texture2D" uid="uid://biwtwyskrgi3t" path="res://assets/texture/death6.png" id="14_slerv"]
+[ext_resource type="Texture2D" uid="uid://nndgpg5umoky" path="res://assets/texture/death7.png" id="15_h1bi6"]
+[ext_resource type="Texture2D" uid="uid://blb01pf06w1ur" path="res://assets/texture/death8.png" id="16_q7qiy"]
+[ext_resource type="Texture2D" uid="uid://b7wtulj50bnaj" path="res://assets/texture/death9.png" id="17_4ued0"]
+[ext_resource type="Texture2D" uid="uid://kqwiesq6mh3k" path="res://assets/texture/death10.png" id="18_hbwut"]
+[ext_resource type="Texture2D" uid="uid://dia8xcbqm8oad" path="res://assets/texture/death11.png" id="19_lp40i"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s7pw8"]
 animations = [{
@@ -40,6 +51,44 @@ animations = [{
 "loop": 1,
 "name": &"awake",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_vwdrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6d7vl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vorow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xv7am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6sysp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_slerv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_h1bi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_q7qiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4ued0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hbwut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_lp40i")
+}],
+"loop": 0,
+"name": &"death",
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_obt1k"]
@@ -58,7 +107,9 @@ metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1714282601]
 sprite_frames = SubResource("SpriteFrames_s7pw8")
-animation = &"awake"
+animation = &"death"
+frame = 8
+frame_progress = 0.34180254
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1578451107]
 position = Vector2(84.49998, -4.4999313)
@@ -72,4 +123,8 @@ collision_layer = 4
 position = Vector2(86.66665, -8.333341)
 shape = SubResource("RectangleShape2D_rkikn")
 
+[node name="DeathTimer" type="Timer" parent="." unique_id=1917249990]
+wait_time = 6.0
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

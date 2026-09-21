@@ -19,13 +19,16 @@ func _ready() -> void:
 
 func _on_timer_timeout() -> void:
 	var enemies = get_tree().get_nodes_in_group("enemies")
-	if enemies.size() < maxEnemiesOnScreen and enemies_spawned < max_enemies:	
+	if enemies.size() < maxEnemiesOnScreen and enemies_spawned < max_enemies and get_node("../Michelangelo").alive:	
 		var spawn = spawn_points[randi() % spawn_points.size()]
 		var enemy = enemy_scene.instantiate()
 		enemy.position = spawn.position
 		enemy.hit_player.connect(hit)
 		level.add_child(enemy)
 		enemy.add_to_group("enemies")
+
+func killAll():
+	queue_free()
 
 func hit():
 	hit_p.emit()
