@@ -69,6 +69,8 @@ func levelUp():
 func updateCompletion(increase):
 	completion += increase
 	$Hud/CompletionLabel.text = "Malware Eliminated: " + str(completion) + "%"
+	if $Michelangelo.alive and completion >= 90:
+		$Michelangelo.nextStage()
 	
 func damageUp():
 	$BulletManager.damage += 1

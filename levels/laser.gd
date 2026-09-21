@@ -16,6 +16,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	print(body.name)
 	if body.name == "player":
 		get_parent()._on_enemy_spawner_hit_p()
 		queue_free()

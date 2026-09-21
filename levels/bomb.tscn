@@ -51,6 +51,8 @@ animations = [{
 size = Vector2(32.999996, 25.899998)
 
 [node name="bomb" type="CharacterBody2D" unique_id=650161304]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("2_x7qnh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1679159398]
@@ -61,6 +63,8 @@ animation = &"explode"
 frame_progress = 0.4339368
 
 [node name="Area2D" type="Area2D" parent="." unique_id=253997292]
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2109983839]
 position = Vector2(-8.0000305, -6.1035156e-05)

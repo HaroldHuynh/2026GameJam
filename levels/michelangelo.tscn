@@ -7,9 +7,18 @@
 [ext_resource type="PackedScene" uid="uid://dr28arotq7uep" path="res://levels/bomb.tscn" id="3_7yivv"]
 [ext_resource type="Texture2D" uid="uid://bj10r37n68wd" path="res://assets/texture/angelo-attack1.png" id="3_c6ff3"]
 [ext_resource type="Texture2D" uid="uid://duevitpev4jfk" path="res://assets/texture/angelo-attack2.png" id="4_7yivv"]
+[ext_resource type="Texture2D" uid="uid://dfondrl4tgk0c" path="res://assets/texture/angelo-asleep.png" id="4_etlah"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s7pw8"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_etlah")
+}],
+"loop": 1,
+"name": &"asleep",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_c6ff3")
@@ -29,7 +38,7 @@ animations = [{
 "texture": ExtResource("2_bfgim")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"awake",
 "speed": 5.0
 }]
 
@@ -49,7 +58,7 @@ metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1714282601]
 sprite_frames = SubResource("SpriteFrames_s7pw8")
-animation = &"attack"
+animation = &"awake"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1578451107]
 position = Vector2(84.49998, -4.4999313)

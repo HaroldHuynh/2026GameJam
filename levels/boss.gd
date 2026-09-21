@@ -13,17 +13,20 @@ var alive : bool
 signal hit_player
 
 func _ready() -> void:
+	$AnimatedSprite2D.play("asleep")
+
+func nextStage() -> void:
 	alive = true
 	hp = 12
-	
-	$AnimatedSprite2D.play("default")
-#timer for laser
+		
+	$AnimatedSprite2D.play("awake")
+	#timer for laser
 	var laser_timer := Timer.new()
 	laser_timer.wait_time = laser_every_seconds
 	laser_timer.autostart = true
 	laser_timer.timeout.connect(fire_laser)
 	add_child(laser_timer)
-#timer for bombs
+	#timer for bombs
 	var bomb_timer := Timer.new()
 	bomb_timer.wait_time = bomb_every_seconds
 	bomb_timer.autostart = true
@@ -51,10 +54,11 @@ func fire_laser() -> void:
 	else:
 		push_warning("Boss could not find a node in the player group.")
 
-	$AnimatedSprite2D.play("default")
+	$AnimatedSprite2D.play("awake")
 	is_attacking = false
 
 func die():
+	alive = false
 	get_parent().updateCompletion(10)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -81,5 +85,5 @@ func fire_bomb() -> void:
 	else:
 		push_warning("Boss could not find a node in the player group.")
 
-	$AnimatedSprite2D.play("default")
+	$AnimatedSprite2D.play("awake")
 	is_attacking = false
