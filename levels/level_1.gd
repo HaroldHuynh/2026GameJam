@@ -21,6 +21,7 @@ func _process(delta: float) -> void:
 	pass
 
 func new_game():
+	$WinScreen.hide()
 	$GameOver.hide()
 	$LevelUpWindow.hide()
 	$Hud.show()
@@ -102,3 +103,7 @@ func speedUp():
 	$Hud/LevelLabel.text = "Windows 1." + str(level)
 	exp = 0
 	$Hud/EXPLabel.text = "Update Progress: " + str(exp) + "%"
+	
+func win():
+	get_tree().paused = true
+	$WinScreen.show()
