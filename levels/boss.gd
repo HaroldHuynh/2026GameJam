@@ -18,7 +18,7 @@ func _ready() -> void:
 	$AnimatedSprite2D.play("asleep")
 
 func nextStage() -> void:
-	hp = 12
+	hp = 80
 		
 	$AnimatedSprite2D.play("awake")
 	#timer for laser
