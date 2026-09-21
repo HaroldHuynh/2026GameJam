@@ -63,6 +63,7 @@ toggle_mode = true
 button_pressed = true
 
 [node name="credits" parent="." unique_id=644358866 instance=ExtResource("3_cmmm6")]
+visible = false
 
 [connection signal="pressed" from="TextureRect/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="TextureRect/Credits" to="." method="_on_credits_pressed"]
