@@ -33,6 +33,49 @@ func nextStage() -> void:
 	bomb_timer.autostart = true
 	bomb_timer.timeout.connect(fire_bomb)
 	add_child(bomb_timer)
+	
+	if hp == 80:
+		$boss_hp/AnimatedSprite2D.play("20")
+	elif hp >= 76:
+		$boss_hp/AnimatedSprite2D.play("19")
+	elif hp >= 72:
+		$boss_hp/AnimatedSprite2D.play("18")
+	elif hp >= 68:
+		$boss_hp/AnimatedSprite2D.play("17")
+	elif hp >= 64:
+		$boss_hp/AnimatedSprite2D.play("16")
+	elif hp >= 60:
+		$boss_hp/AnimatedSprite2D.play("15")
+	elif hp >= 56:
+		$boss_hp/AnimatedSprite2D.play("14")
+	elif hp >= 52:
+		$boss_hp/AnimatedSprite2D.play("13")
+	elif hp >= 48:
+		$boss_hp/AnimatedSprite2D.play("12")
+	elif hp >= 44:
+		$boss_hp/AnimatedSprite2D.play("11")
+	elif hp >= 40:
+		$boss_hp/AnimatedSprite2D.play("10")
+	elif hp >= 36:
+		$boss_hp/AnimatedSprite2D.play("9")
+	elif hp >= 32:
+		$boss_hp/AnimatedSprite2D.play("8")
+	elif hp >= 28:
+		$boss_hp/AnimatedSprite2D.play("7")
+	elif hp >= 24:
+		$boss_hp/AnimatedSprite2D.play("6")
+	elif hp >= 20:
+		$boss_hp/AnimatedSprite2D.play("5")
+	elif hp >= 16:
+		$boss_hp/AnimatedSprite2D.play("4")
+	elif hp >= 12:
+		$boss_hp/AnimatedSprite2D.play("3")
+	elif hp >= 8:
+		$boss_hp/AnimatedSprite2D.play("2")
+	elif hp >= 4:
+		$boss_hp/AnimatedSprite2D.play("1")
+	elif hp >= 0:
+		$boss_hp/AnimatedSprite2D.play("0")
 
 func fire_laser() -> void:
 	if alive:

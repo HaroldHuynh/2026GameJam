@@ -196,5 +196,6 @@ animations = [{
 [node name="BossHP" type="CanvasLayer" unique_id=57496481]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=366768803]
+position = Vector2(1579, 1888)
 sprite_frames = SubResource("SpriteFrames_s7pw8")
 animation = &"0"
