@@ -1,0 +1,200 @@
+[gd_scene format=3 uid="uid://wi6gfxrcydiu"]
+
+[ext_resource type="Texture2D" uid="uid://bie2uopj8omr7" path="res://assets/texture/bosshp0.png" id="1_mfe30"]
+[ext_resource type="Texture2D" uid="uid://ctbs1qhaq2m68" path="res://assets/texture/bosshp1.png" id="2_qcu61"]
+[ext_resource type="Texture2D" uid="uid://d3yjdo8v3orga" path="res://assets/texture/bosshp10.png" id="3_1vtr5"]
+[ext_resource type="Texture2D" uid="uid://ca4kvbkyvtak" path="res://assets/texture/bosshp11.png" id="4_nn688"]
+[ext_resource type="Texture2D" uid="uid://dxcmqantgtgju" path="res://assets/texture/bosshp12.png" id="5_oo5o3"]
+[ext_resource type="Texture2D" uid="uid://cswmi26jryxvs" path="res://assets/texture/bosshp13.png" id="6_0c3qh"]
+[ext_resource type="Texture2D" uid="uid://dyxqprk2lsqjy" path="res://assets/texture/bosshp14.png" id="7_6fers"]
+[ext_resource type="Texture2D" uid="uid://pyo4efmbftqn" path="res://assets/texture/bosshp15.png" id="8_tr7ri"]
+[ext_resource type="Texture2D" uid="uid://bxdq6gsvirdmj" path="res://assets/texture/bosshp16.png" id="9_fc5oe"]
+[ext_resource type="Texture2D" uid="uid://iren3bk4vqmm" path="res://assets/texture/bosshp17.png" id="10_enyxt"]
+[ext_resource type="Texture2D" uid="uid://bshu3bdjgeru8" path="res://assets/texture/bosshp18.png" id="11_fifwf"]
+[ext_resource type="Texture2D" uid="uid://bkkwisr7q11h8" path="res://assets/texture/bosshp19.png" id="12_xfp12"]
+[ext_resource type="Texture2D" uid="uid://okttaveq6qk6" path="res://assets/texture/bosshp2.png" id="13_bbe5u"]
+[ext_resource type="Texture2D" uid="uid://d2k0af6covjpm" path="res://assets/texture/bosshp20.png" id="14_s1lhp"]
+[ext_resource type="Texture2D" uid="uid://bo3fgbo6872r" path="res://assets/texture/bosshp3.png" id="15_vlfam"]
+[ext_resource type="Texture2D" uid="uid://m7pxr8k8uden" path="res://assets/texture/bosshp4.png" id="16_xpa86"]
+[ext_resource type="Texture2D" uid="uid://jhbs6nllj6oq" path="res://assets/texture/bosshp5.png" id="17_8aly2"]
+[ext_resource type="Texture2D" uid="uid://bq2pqabj3gpkh" path="res://assets/texture/bosshp6.png" id="18_hhaq8"]
+[ext_resource type="Texture2D" uid="uid://5n5s80cqjov6" path="res://assets/texture/bosshp7.png" id="19_iucul"]
+[ext_resource type="Texture2D" uid="uid://ctoh8xxdwfje2" path="res://assets/texture/bosshp8.png" id="20_wkdbd"]
+[ext_resource type="Texture2D" uid="uid://cry1p1jmqqw6n" path="res://assets/texture/bosshp9.png" id="21_2ngah"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7pw8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mfe30")
+}],
+"loop": 1,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qcu61")
+}],
+"loop": 1,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1vtr5")
+}],
+"loop": 1,
+"name": &"10",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_nn688")
+}],
+"loop": 1,
+"name": &"11",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_oo5o3")
+}],
+"loop": 1,
+"name": &"12",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0c3qh")
+}],
+"loop": 1,
+"name": &"13",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_6fers")
+}],
+"loop": 1,
+"name": &"14",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_tr7ri")
+}],
+"loop": 1,
+"name": &"15",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_fc5oe")
+}],
+"loop": 1,
+"name": &"16",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_enyxt")
+}],
+"loop": 1,
+"name": &"17",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_fifwf")
+}],
+"loop": 1,
+"name": &"18",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_xfp12")
+}],
+"loop": 1,
+"name": &"19",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_bbe5u")
+}],
+"loop": 1,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_s1lhp")
+}],
+"loop": 1,
+"name": &"20",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_vlfam")
+}],
+"loop": 1,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_xpa86")
+}],
+"loop": 1,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_8aly2")
+}],
+"loop": 1,
+"name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_hhaq8")
+}],
+"loop": 1,
+"name": &"6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_iucul")
+}],
+"loop": 1,
+"name": &"7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_wkdbd")
+}],
+"loop": 1,
+"name": &"8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_2ngah")
+}],
+"loop": 1,
+"name": &"9",
+"speed": 5.0
+}]
+
+[node name="BossHP" type="CanvasLayer" unique_id=57496481]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=366768803]
+sprite_frames = SubResource("SpriteFrames_s7pw8")
+animation = &"0"
