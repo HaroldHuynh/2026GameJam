@@ -14,6 +14,7 @@ var direction : Vector2
 func _ready():
 	alive = true
 	hp = 2
+	$AnimatedSprite2D.play("normal")
 
 func _process(delta: float):
 	if not get_node("../Michelangelo").alive:
@@ -27,9 +28,10 @@ func _physics_process(delta: float) -> void:
 	look_at(player.position)
 	
 func die():
+	$AnimatedSprite2D.play("death")
+	
 	alive = false
 	get_parent().updateExp()
-	$AnimatedSprite2D.play("death")
 	queue_free()
 	if get_parent().completion < 90:
 		get_parent().updateCompletion(3)
@@ -38,5 +40,6 @@ func die():
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	hit_player.emit()
+	$AnimatedSprite2D.play("death")
 	get_node("../EnemySpawner").enemies_spawned -= 1
 	queue_free()

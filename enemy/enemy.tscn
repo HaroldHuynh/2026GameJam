@@ -38,7 +38,7 @@ animations = [{
 "texture": ExtResource("2_ofsxj")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"normal",
 "speed": 5.0
 }]
 
@@ -58,8 +58,7 @@ position = Vector2(-121, 201.00002)
 rotation = 1.5707964
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_s7pw8")
-animation = &"death"
-frame_progress = 0.985751
+animation = &"normal"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=615662743]
 collision_layer = 4
