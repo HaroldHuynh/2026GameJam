@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://wi6gfxrcydiu"]
 
 [ext_resource type="Texture2D" uid="uid://bie2uopj8omr7" path="res://assets/texture/bosshp0.png" id="1_mfe30"]
+[ext_resource type="Script" uid="uid://df0rqy1xdtfna" path="res://boss_hp.gd" id="1_qcu61"]
 [ext_resource type="Texture2D" uid="uid://ctbs1qhaq2m68" path="res://assets/texture/bosshp1.png" id="2_qcu61"]
 [ext_resource type="Texture2D" uid="uid://d3yjdo8v3orga" path="res://assets/texture/bosshp10.png" id="3_1vtr5"]
 [ext_resource type="Texture2D" uid="uid://ca4kvbkyvtak" path="res://assets/texture/bosshp11.png" id="4_nn688"]
@@ -194,8 +195,9 @@ animations = [{
 }]
 
 [node name="BossHP" type="CanvasLayer" unique_id=57496481]
+script = ExtResource("1_qcu61")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=366768803]
-position = Vector2(1579, 1888)
+position = Vector2(1560, 2122)
 sprite_frames = SubResource("SpriteFrames_s7pw8")
 animation = &"0"
