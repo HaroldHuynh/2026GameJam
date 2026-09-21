@@ -13,6 +13,8 @@ var alive : bool
 signal hit_player
 
 func _ready() -> void:
+	alive = true
+	hp = 10000000
 	$AnimatedSprite2D.play("asleep")
 
 func nextStage() -> void:
