@@ -97,3 +97,5 @@ func _on_death_timer_timeout() -> void:
 	queue_free()
 	get_node("../EnemySpawner").killAll()
 	get_parent().updateCompletion(10)
+	get_parent().win()
+	
