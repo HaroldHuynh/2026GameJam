@@ -29,6 +29,7 @@ func _physics_process(delta: float) -> void:
 func die():
 	alive = false
 	get_parent().updateExp()
+	$AnimatedSprite2D.play("death")
 	queue_free()
 	if get_parent().completion < 90:
 		get_parent().updateCompletion(3)
