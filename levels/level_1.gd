@@ -14,6 +14,7 @@ var completion : int
 func _ready() -> void:
 	new_game()
 	$Michelangelo/AnimatedSprite2D.play("default")
+	$player/AnimatedSprite2D.play("default")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -50,12 +51,16 @@ func new_game():
 func _on_enemy_spawner_hit_p() -> void:
 	hp -= 1
 	$Hud/HPLabel.text = "Memory: " + str(100 - int((hp / maxHP) * 100)) + "%"
+	$player/AnimatedSprite2D.play("damaged")
+	await get_tree().create_timer(0.3).timeout
+	$player/AnimatedSprite2D.play("default")
 	if hp <= 0:
 		$Hud.hide()
 		get_tree().paused = true
 		$GameOver.show()
 		gameOver = true
-		
+	
+	
 func updateExp():
 	exp += 10
 	$Hud/EXPLabel.text = "Update Progress: " + str(exp) + "%"
@@ -70,7 +75,6 @@ func updateCompletion(increase):
 	completion += increase
 	$Hud/CompletionLabel.text = "Malware Eliminated: " + str(completion) + "%"
 	if $Michelangelo.alive and completion >= 90:
-		print("balls")
 		$Michelangelo.nextStage()
 	
 func damageUp():

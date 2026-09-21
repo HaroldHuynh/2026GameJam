@@ -1,7 +1,54 @@
 [gd_scene format=3 uid="uid://bx76wcvt7v6l5"]
 
 [ext_resource type="Script" uid="uid://dhjey7btq2ik3" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="Texture2D" uid="uid://v2emtysysrqc" path="res://assets/texture/player_dmg.png" id="2_g1dw6"]
 [ext_resource type="Texture2D" uid="uid://rcdsykfpah2j" path="res://player/cursor.png" id="2_rkbax"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7pw8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g1dw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g1dw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g1dw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g1dw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g1dw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g1dw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g1dw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g1dw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g1dw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g1dw6")
+}],
+"loop": 1,
+"name": &"damaged",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rkbax")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkikn"]
 size = Vector2(131, 90)
@@ -10,11 +57,12 @@ size = Vector2(131, 90)
 collision_layer = 2
 script = ExtResource("1_rkbax")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1308834584]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=326842415]
 position = Vector2(-81, 211)
 rotation = 1.5707964
-scale = Vector2(0.18, 0.18)
-texture = ExtResource("2_rkbax")
+scale = Vector2(0.18000002, 0.18000002)
+sprite_frames = SubResource("SpriteFrames_s7pw8")
+animation = &"damaged"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=558579591]
 position = Vector2(0.5, 2)
