@@ -21,17 +21,18 @@ func _process(delta: float):
 		die()
 
 func _physics_process(delta: float) -> void:
-	direction = player.position - position
-	direction = direction.normalized()
-	velocity = direction * speed
-	move_and_slide()
-	look_at(player.position)
+	if alive:
+		direction = player.position - position
+		direction = direction.normalized()
+		velocity = direction * speed
+		move_and_slide()
+		look_at(player.position)
 	
 func die():
 	$AnimatedSprite2D.play("death")
-	
 	alive = false
 	get_parent().updateExp()
+	await get_tree().create_timer(0.6).timeout
 	queue_free()
 	if get_parent().completion < 90:
 		get_parent().updateCompletion(3)
@@ -40,6 +41,5 @@ func die():
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	hit_player.emit()
-	$AnimatedSprite2D.play("death")
 	get_node("../EnemySpawner").enemies_spawned -= 1
 	queue_free()
